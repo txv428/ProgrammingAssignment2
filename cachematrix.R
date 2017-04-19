@@ -37,3 +37,18 @@ cacheSolve <- function(x, ...) {
         x$setInverse(p)
 p 
 }
+
+To verify the function and results
+## x = rbind(c(1, -1/4), c(-1/4, 1))
+## m = makeCacheMatrix(x)
+## m$get()
+##            [,1]        [,2]
+##[1,]  1.0000000 -0.02325581
+##[2,] -0.3333333  1.00000000
+
+## No cache in the first run
+## > cacheSolve(m)
+##           [,1]      [,2]
+## [1,] 1.0666667 0.2666667
+## [2,] 0.2666667 1.0666667
+
